@@ -1,0 +1,9 @@
+.gradient1{
+    background: linear-gradient(to bottom, green, red, yellow);
+}
+.gradient2{
+    background: linear-gradient(to right, orange, red, blue);
+}
+.gradient3 {
+    background: linear-gradient(to left, purple,gray, white);
+}
