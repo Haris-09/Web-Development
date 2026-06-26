@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+      }
+
+      .profile-card {
+        width: 280px;
+        background: gray;
+        border-radius: 12px;
+        padding: 35px 25px;
+        text-align: center;
+        background: linear-gradient(to right, purple, blue, green, yellow, red);
+      }
+
+      /* Profile Photo with Gradient */
+      .photo {
+        width: 120px;
+        height: 120px;
+        margin: auto;
+        border-radius: 50%;
+        padding: 4px;
+      }
+
+      .profile-photo {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid black;
+        display: block;
+        animation: photoRotate 4s linear infinite;
+      }
+
+      @keyframes photoRotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(180deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Name with Movement */
+      .name-container {
+        margin-bottom: 25px;
+        height: 32px;
+      }
+
+      .name {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: 1px;
+        display: inline-block;
+        animation: nameSlide 3s linear infinite;
+      }
+
+      @keyframes nameSlide {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(10px);
+        }
+        50% {
+          transform: translateX(0);
+        }
+        75% {
+          transform: translateX(-10px);
+        }
+      }
+
+      /* Buttons */
+      .btn {
+        display: block;
+        width: 100%;
+        padding: 12px 20px;
+        margin-bottom: 12px;
+        border: 2px solid cyan;
+        border-radius: 8px;
+        cursor: pointer;
+        background: transparent;
+        color: cyan;
+      }
+
+      .btn:hover {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Profile Card -->
+    <div class="card-container" id="cardContainer">
+      <div class="profile-card" id="profileCard">
+        <!-- Profile Photo with Gradient -->
+        <div class="photo" id="photo">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+            alt="Muhammad Haris"
+            class="profile-photo"
+            id="profilePhoto"
+          />
+        </div>
+        <!-- Name with Movement -->
+        <div class="name-container">
+          <h2 class="name" id="userName">Muhammad Haris</h2>
+        </div>
+        <!-- Buttons -->
+        <button class="btn" id="followBtn">Follow</button>
+        <button class="btn" id="messageBtn">Message</button>
+      </div>
+    </div>
+  </body>
+</html>
